@@ -15,22 +15,22 @@ struct Servizi: View {
             
             
             Form{
-               PickerView()
-                    .edgesIgnoringSafeArea(.all)
-                 /*   Picker("", selection: $segmentedChoise){
+                ZStack{
+                    Color(.systemGray6)
+                        .frame(width: 350)
+                        .padding(-50)
+                    Picker("", selection: $segmentedChoise){
                         
                         Text("Nazionali").tag(0)
                         Text("Locali").tag(1)
                         
                         
                     }
-                    
                     .pickerStyle(.segmented)
-                    .onAppear()*/
-             
+                    .padding(.horizontal, -20)
+                }
                 Section{
                     List{
-                        
                         DisclosureGroup()
                         {
                             
@@ -45,6 +45,7 @@ struct Servizi: View {
                         }
                     label: {
                         Label("Servizi Ministeriali", systemImage: "person.text.rectangle")
+                            .padding()
                     }
                         DisclosureGroup()
                         {
@@ -60,6 +61,8 @@ struct Servizi: View {
                         }
                     label: {
                         Label("Enti", systemImage: "person.2")
+                            .padding()
+
                     }
                         DisclosureGroup()
                         {
@@ -70,6 +73,8 @@ struct Servizi: View {
                         }
                     label: {
                         Label("Agenzie", systemImage: "building")
+                            .padding()
+
                     }
                         DisclosureGroup()
                         {
@@ -82,6 +87,8 @@ struct Servizi: View {
                         
                     label: {
                         Label("Istituzioni Nazionali", systemImage: "flag")
+                            .padding()
+
                     }
                         DisclosureGroup()
                         {
@@ -89,9 +96,12 @@ struct Servizi: View {
                             
                             Label("Carta Giovani Nazionale", systemImage: "person.crop.square.filled.and.at.rectangle")
                             Label("CGN - Novità e aggiornamenti", systemImage: "newspaper")
+                      
                         }
                     label: {
                         Label("Dipartimento Politiche Giovanili", systemImage: "graduationcap")
+                            .padding()
+
                     }
                        
                     }
@@ -125,8 +135,11 @@ struct Servizi: View {
                 })
                         
             
+      // .scrollContentBackground(.hidden)
             
-        }    }
+        }
+        
+    }
 }
 
 struct Servizi_Previews: PreviewProvider {
