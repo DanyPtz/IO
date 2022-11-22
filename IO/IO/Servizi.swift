@@ -13,11 +13,11 @@ struct Servizi: View {
     var body: some View {
         NavigationStack{
             
-            Spacer()
             
             Form{
-                VStack{
-                    Picker("", selection: $segmentedChoise){
+               PickerView()
+                    .edgesIgnoringSafeArea(.all)
+                 /*   Picker("", selection: $segmentedChoise){
                         
                         Text("Nazionali").tag(0)
                         Text("Locali").tag(1)
@@ -25,8 +25,9 @@ struct Servizi: View {
                         
                     }
                     
-                    .pickerStyle(SegmentedPickerStyle())
-                }
+                    .pickerStyle(.segmented)
+                    .onAppear()*/
+             
                 Section{
                     List{
                         
@@ -92,21 +93,38 @@ struct Servizi: View {
                     label: {
                         Label("Dipartimento Politiche Giovanili", systemImage: "graduationcap")
                     }
-                        
                        
                     }
                     
-                }}.navigationTitle("Servizi")
+                    
+                }
+                
+
+            }.navigationTitle("Servizi")
                 .navigationBarTitleDisplayMode(.inline)
+            
                 .navigationBarItems(trailing:
                                         HStack{
                     
                     Button(action: {
-                        print("Action Clicked")
+                        print("")
+                    }){
+                        Image(systemName: "gear").imageScale(.large)
+                    }
+                    
+                })
+                .navigationBarItems(leading:
+                                        HStack{
+                    
+                    Button(action: {
+                        print("")
                     }){
                         Image(systemName: "questionmark.circle").imageScale(.large)
                     }
+                    
                 })
+                        
+            
             
         }    }
 }
