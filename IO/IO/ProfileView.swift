@@ -12,53 +12,67 @@ struct ProfileView: View {
         
         VStack{
             NavigationStack{
-                ZStack{
-                    
-                    Image("Group")
-                        .frame(maxWidth: 390, maxHeight: 50)
-                        .foregroundColor(.black)
-                        .font(.headline)
-                        .padding(.vertical, 50)
-                        .background(Color.systemGray5)
-                        .cornerRadius(28)
-                }
-                Section{
-                    List{
-                        Label("I tuoi dati", systemImage: "person")
-                            .padding()
-                        Label("Preferenze", systemImage: "gear.circle")
-                            .padding()
-                        Label("Sicurezza", systemImage: "shield")
-                            .padding()
-                        Label("Privacy e Condizioni D'uso", systemImage: "lock")
-                            .padding()
-                        Label("Informazioni su IO", systemImage: "info")
-                            .padding()
-                        Label("Logout", systemImage: "figure.walk")
-                            .padding()
+                
+                Form{
+                    ZStack{
+                        Color(.systemGray6)
+                            .frame(width: 350)
+                            .padding(-40)
+                        Image("Group 3")
+                            
+                        //.frame(maxWidth: 340, maxHeight: 115)
+                        //.foregroundColor(.black)
+                        //.font(.headline)
+                        //.padding(.vertical, 40)
+                        //.background(Color.systemGray5)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 460, height: 220, alignment: .center)
+                            .padding(-10)
+                     
+                        //.frame(height: 200)
+                    }
+
+                    Section{
+                        VStack{
+                            List{
+                                
+                                Label("I tuoi dati", systemImage: "person")
+                                    .padding()
+                                Label("Preferenze", systemImage: "gear.circle")
+                                    .padding()
+                                Label("Sicurezza", systemImage: "shield")
+                                    .padding()
+                                Label("Privacy e Condizioni D'uso", systemImage: "lock")
+                                    .padding()
+                                Label("Informazioni su IO", systemImage: "info")
+                                    .padding()
+                                Label("Logout", systemImage: "figure.walk")
+                                    .padding()
+                                
+                            }.navigationTitle("Profilo")
+                            Spacer(minLength: -34)
+                        }
                         
-                    }.navigationTitle("Profilo")
-                    
-                    
-                    
-                     .navigationBarTitleDisplayMode(.inline)
-                    
-                    
-                        .navigationBarItems(trailing:
-                                                HStack{
+                        
                             
-                            Button(action: {
-                                print("")
-                            }){
-                                Image(systemName: "questionmark.circle").imageScale(.large)
-                            }
-                            
-                        })
-                    
-                    //.listStyle(.plain)
-                }//.background(.blue)
-                //.scrollContentBackground(.hidden)
-            }    }
+                        
+                        
+                            .navigationBarItems(trailing:
+                                                    HStack{
+                                
+                                Button(action: {
+                                    print("")
+                                }){
+                                    Image(systemName: "questionmark.circle").imageScale(.large)
+                                }
+                                
+                            })
+                        
+                        //.listStyle(.plain)
+                    }//.background(.blue)
+                    //.scrollContentBackground(.hidden)
+                }   } }
     }
 }
 

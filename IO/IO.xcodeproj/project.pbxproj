@@ -14,6 +14,7 @@
 		3C268715292AA6890075B9BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268714292AA6890075B9BC /* ContentView.swift */; };
 		3C268717292AA6890075B9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C268716292AA6890075B9BC /* Assets.xcassets */; };
 		3C26871A292AA6890075B9BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C268719292AA6890075B9BC /* Preview Assets.xcassets */; };
+		3C2BF47A292E6F5D0058CEB2 /* cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BF479292E6F5D0058CEB2 /* cornerRadius.swift */; };
 		3CBEFD9D292AD248002DAF9F /* Servizi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBEFD9C292AD248002DAF9F /* Servizi.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		3C268714292AA6890075B9BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C268716292AA6890075B9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C268719292AA6890075B9BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C2BF479292E6F5D0058CEB2 /* cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cornerRadius.swift; sourceTree = "<group>"; };
 		3CBEFD9C292AD248002DAF9F /* Servizi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servizi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				3C133482292D12C600F326E8 /* ProfileView.swift */,
 				3C133484292D25B600F326E8 /* Colors.swift */,
 				3C133480292CF71600F326E8 /* PickerView.swift */,
+				3C2BF479292E6F5D0058CEB2 /* cornerRadius.swift */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				3C133481292CF71600F326E8 /* PickerView.swift in Sources */,
 				3C133485292D25B600F326E8 /* Colors.swift in Sources */,
 				3C268715292AA6890075B9BC /* ContentView.swift in Sources */,
+				3C2BF47A292E6F5D0058CEB2 /* cornerRadius.swift in Sources */,
 				3C133483292D12C600F326E8 /* ProfileView.swift in Sources */,
 				3C268713292AA6890075B9BC /* IOApp.swift in Sources */,
 				3CBEFD9D292AD248002DAF9F /* Servizi.swift in Sources */,
