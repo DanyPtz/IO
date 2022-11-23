@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 struct ProfileView: View {
+    @State var showModal: Bool = false
     var body: some View {
         
         VStack{
@@ -18,23 +19,31 @@ struct ProfileView: View {
                         Color(.systemGray6)
                             .frame(width: 350)
                             .padding(-40)
-                        Image("Group 3")
+                        Button(action: {
+                            self.showModal.toggle()
                             
-                        //.frame(maxWidth: 340, maxHeight: 115)
-                        //.foregroundColor(.black)
-                        //.font(.headline)
-                        //.padding(.vertical, 40)
-                        //.background(Color.systemGray5)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 460, height: 220, alignment: .center)
-                            .padding(-10)
-                     
+                        }){
+                            Image("Group 3")
+                            
+                            //.frame(maxWidth: 340, maxHeight: 115)
+                            //.foregroundColor(.black)
+                            //.font(.headline)
+                            //.padding(.vertical, 40)
+                            //.background(Color.systemGray5)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 460, height: 220, alignment: .center)
+                                .padding(-10)
+                        }
                         //.frame(height: 200)
+                    }.sheet(isPresented: $showModal) {
+                        Image("Card 2")
+                            .presentationDetents([.medium, .large])
                     }
-
+                    
                     Section{
-                        VStack{
+                        
+                        VStack(alignment: .leading){
                             List{
                                 
                                 Label("I tuoi dati", systemImage: "person")
@@ -50,29 +59,34 @@ struct ProfileView: View {
                                 Label("Logout", systemImage: "figure.walk")
                                     .padding()
                                 
-                            }.navigationTitle("Profilo")
+                            }
+                            .navigationTitle("Profilo")
+                            
                             Spacer(minLength: -34)
                         }
                         
                         
+                        
+                        
+                        
+                        .navigationBarItems(trailing:
+                                                HStack{
                             
+                            Button(action: {
+                                print("")
+                            }){
+                                Image(systemName: "questionmark.circle").imageScale(.large)
+                            }
+                            
+                        })
                         
                         
-                            .navigationBarItems(trailing:
-                                                    HStack{
-                                
-                                Button(action: {
-                                    print("")
-                                }){
-                                    Image(systemName: "questionmark.circle").imageScale(.large)
-                                }
-                                
-                            })
-                        
-                        //.listStyle(.plain)
-                    }//.background(.blue)
-                    //.scrollContentBackground(.hidden)
-                }   } }
+                    }
+                    
+                }
+                
+                
+            } }
     }
 }
 
