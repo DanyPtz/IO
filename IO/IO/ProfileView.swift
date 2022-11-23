@@ -37,7 +37,7 @@ struct ProfileView: View {
                         }
                         //.frame(height: 200)
                     }.sheet(isPresented: $showModal) {
-                        Image("Card 2")
+                        CardView().tag(0)
                             .presentationDetents([.medium, .large])
                     }
                     
