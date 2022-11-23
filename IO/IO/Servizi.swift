@@ -45,7 +45,9 @@ struct Servizi: View {
                         }
                     label: {
                         Label("Servizi Ministeriali", systemImage: "person.text.rectangle")
+                        
                             .padding()
+                        
                     }
                         DisclosureGroup()
                         {
@@ -135,7 +137,7 @@ struct Servizi: View {
                 })
                         
             
-      // .scrollContentBackground(.hidden)
+       //.scrollContentBackground(.hidden)
             
         }
         

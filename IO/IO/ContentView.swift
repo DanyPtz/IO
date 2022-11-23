@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-struct ContentView: View {
+struct ContentV: View {
     @State private var selection = 0
    
        
@@ -59,7 +59,7 @@ ProfileView()
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            ContentV()
         }
     }
 }

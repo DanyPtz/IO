@@ -14,11 +14,11 @@ struct ProfileView: View {
             NavigationStack{
                 ZStack{
                     
-                    Text("INFORMAZIONI GENERALI")
-                        .frame(maxWidth: 380)
+                    Image("Group")
+                        .frame(maxWidth: 390, maxHeight: 50)
                         .foregroundColor(.black)
                         .font(.headline)
-                        .padding(.vertical, 20)
+                        .padding(.vertical, 50)
                         .background(Color.systemGray5)
                         .cornerRadius(28)
                 }
@@ -41,7 +41,7 @@ struct ProfileView: View {
                     
                     
                     
-                    // .navigationBarTitleDisplayMode(.inline)
+                     .navigationBarTitleDisplayMode(.inline)
                     
                     
                         .navigationBarItems(trailing:
