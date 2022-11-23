@@ -16,12 +16,21 @@ struct ContentV: View {
     var body: some View {
         
         TabView(selection: $selection){
+            ProfileView()
+                            .tabItem{
+                                Image(systemName:"person")
+                                Text("Profilo")
+                                
+          /*
+                    
+                    */
+                }
             
-            Text("home tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            Servizi()
+            
                 .tabItem{
-                    Image(systemName: "message.fill")
-                    Text("Messaggi")
+                     Image(systemName:  "wrench.and.screwdriver.fill")
+                    Text("Servizi")
                     
                     
                 }
@@ -32,25 +41,16 @@ struct ContentV: View {
                     
                     
                 }
-            Servizi()
             
-                .tabItem{
-                     Image(systemName:  "wrench.and.screwdriver.fill")
-                    Text("Servizi")
-                    
-                    
-                }
-            
-            
-ProfileView()
-                .tabItem{
-                    Image(systemName:"person")
-                    Text("Profilo")
-                    
+Text("")
+ .font(.system(size: 30, weight: .bold, design: .rounded))
+ .tabItem{
+     Image(systemName: "message.fill")
+     Text("Messaggi")
                 }
             
         }.onAppear{
-            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().backgroundColor = .systemGray6
         }
             
         

@@ -35,7 +35,6 @@ struct ProfileView: View {
                                 .frame(width: 460, height: 220, alignment: .center)
                                 .padding(-10)
                         }
-                        //.frame(height: 200)
                     }.sheet(isPresented: $showModal) {
                         CardView().tag(0)
                             .presentationDetents([.medium, .large])
