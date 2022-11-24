@@ -17,8 +17,8 @@ struct Servizi: View {
             Form{
                 ZStack{
                     Color(.systemGray6)
-                        .frame(width: 370)
-                        .padding(-50)
+                        .frame(width: 360)
+                        .padding(-40)
                     Picker("", selection: $segmentedChoise){
                         
                         Text("Nazionali").tag(0)
@@ -27,7 +27,7 @@ struct Servizi: View {
                         
                     }
                     .pickerStyle(.segmented)
-                    .padding(.horizontal, -20)
+                    .padding(.horizontal, -15)
                 }
                 Section{
                     List{
