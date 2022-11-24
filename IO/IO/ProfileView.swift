@@ -17,7 +17,7 @@ struct ProfileView: View {
                 Form{
                     ZStack{
                         Color(.systemGray6)
-                            .frame(width: 350)
+                            .frame(width: 370)
                             .padding(-40)
                         Button(action: {
                             self.showModal.toggle()

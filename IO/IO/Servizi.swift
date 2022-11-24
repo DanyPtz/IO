@@ -17,7 +17,7 @@ struct Servizi: View {
             Form{
                 ZStack{
                     Color(.systemGray6)
-                        .frame(width: 350)
+                        .frame(width: 370)
                         .padding(-50)
                     Picker("", selection: $segmentedChoise){
                         
@@ -121,6 +121,7 @@ struct Servizi: View {
                     Button(action: {
                         print("")
                     }){
+                        Text("")
                         Image(systemName: "gear").imageScale(.large)
                     }
                     
